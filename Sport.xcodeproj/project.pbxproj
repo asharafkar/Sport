@@ -13,6 +13,10 @@
 		2994CFAA225608880097840C /* Sport.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2994CFA8225608880097840C /* Sport.xcdatamodeld */; };
 		2994CFAC225608890097840C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2994CFAB225608890097840C /* Assets.xcassets */; };
 		2994CFAF225608890097840C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2994CFAD225608890097840C /* LaunchScreen.storyboard */; };
+		2994CFBA22561B3D0097840C /* Shabnam-Bold-FD.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2994CFB722561B3D0097840C /* Shabnam-Bold-FD.ttf */; };
+		2994CFBB22561B3D0097840C /* Shabnam-FD.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2994CFB822561B3D0097840C /* Shabnam-FD.ttf */; };
+		2994CFBC22561B3D0097840C /* Shabnam-Light-FD.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2994CFB922561B3D0097840C /* Shabnam-Light-FD.ttf */; };
+		2994CFBF22561D530097840C /* MyTabBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2994CFBE22561D530097840C /* MyTabBarItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,10 @@
 		2994CFAB225608890097840C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2994CFAE225608890097840C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2994CFB0225608890097840C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2994CFB722561B3D0097840C /* Shabnam-Bold-FD.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Shabnam-Bold-FD.ttf"; sourceTree = "<group>"; };
+		2994CFB822561B3D0097840C /* Shabnam-FD.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Shabnam-FD.ttf"; sourceTree = "<group>"; };
+		2994CFB922561B3D0097840C /* Shabnam-Light-FD.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Shabnam-Light-FD.ttf"; sourceTree = "<group>"; };
+		2994CFBE22561D530097840C /* MyTabBarItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTabBarItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +64,8 @@
 		2994CFA0225608880097840C /* Sport */ = {
 			isa = PBXGroup;
 			children = (
+				2994CFBD22561D1C0097840C /* View */,
+				2994CFB622561B1F0097840C /* Resources */,
 				2994CFA1225608880097840C /* AppDelegate.swift */,
 				2994CFA3225608880097840C /* ViewController.swift */,
 				2994CFA5225608880097840C /* Main.storyboard */,
@@ -65,6 +75,24 @@
 				2994CFA8225608880097840C /* Sport.xcdatamodeld */,
 			);
 			path = Sport;
+			sourceTree = "<group>";
+		};
+		2994CFB622561B1F0097840C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				2994CFB722561B3D0097840C /* Shabnam-Bold-FD.ttf */,
+				2994CFB822561B3D0097840C /* Shabnam-FD.ttf */,
+				2994CFB922561B3D0097840C /* Shabnam-Light-FD.ttf */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		2994CFBD22561D1C0097840C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2994CFBE22561D530097840C /* MyTabBarItem.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -126,7 +154,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				2994CFAF225608890097840C /* LaunchScreen.storyboard in Resources */,
+				2994CFBB22561B3D0097840C /* Shabnam-FD.ttf in Resources */,
+				2994CFBC22561B3D0097840C /* Shabnam-Light-FD.ttf in Resources */,
 				2994CFAC225608890097840C /* Assets.xcassets in Resources */,
+				2994CFBA22561B3D0097840C /* Shabnam-Bold-FD.ttf in Resources */,
 				2994CFA7225608880097840C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -140,6 +171,7 @@
 			files = (
 				2994CFA4225608880097840C /* ViewController.swift in Sources */,
 				2994CFAA225608880097840C /* Sport.xcdatamodeld in Sources */,
+				2994CFBF22561D530097840C /* MyTabBarItem.swift in Sources */,
 				2994CFA2225608880097840C /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -293,7 +325,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = sharafkar.tutorial.realm.sport.Sport;
+				PRODUCT_BUNDLE_IDENTIFIER = sharafkar.tutorial.realm.sport;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -311,7 +343,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = sharafkar.tutorial.realm.sport.Sport;
+				PRODUCT_BUNDLE_IDENTIFIER = sharafkar.tutorial.realm.sport;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
