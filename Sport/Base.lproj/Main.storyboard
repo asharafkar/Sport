@@ -42,7 +42,7 @@
                                 <rect key="frame" x="0.0" y="104" width="375" height="625"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="70" id="f7x-iJ-ZgF">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="LogCell" rowHeight="70" id="f7x-iJ-ZgF">
                                         <rect key="frame" x="0.0" y="28" width="375" height="70"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="f7x-iJ-ZgF" id="2RM-1W-feO">
@@ -75,8 +75,8 @@
                                                                     <fontDescription key="fontDescription" name="Shabnam-Bold-FD" family="Shabnam FD" pointSize="18"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="/mi" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ru3-wT-7EQ">
-                                                                    <rect key="frame" x="20.666666666666686" y="24.666666666666664" width="18.666666666666671" height="16.666666666666664"/>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="/ مایل" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ru3-wT-7EQ">
+                                                                    <rect key="frame" x="15" y="24.666666666666664" width="30" height="16.666666666666664"/>
                                                                     <fontDescription key="fontDescription" name="Shabnam-FD" family="Shabnam FD" pointSize="12"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
@@ -165,6 +165,9 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="faM-WW-unq">
                                                 <rect key="frame" x="20.666666666666657" y="0.0" width="71" height="71"/>
                                                 <state key="normal" image="startRunningButton"/>
+                                                <connections>
+                                                    <segue destination="hpY-Bk-D15" kind="show" id="a2Y-qr-2SJ"/>
+                                                </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="شروع به دویدن" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mJx-O8-UrZ">
                                                 <rect key="frame" x="0.0" y="71" width="112.66666666666667" height="24.666666666666671"/>
@@ -214,6 +217,141 @@
             </objects>
             <point key="canvasLocation" x="1762.4000000000001" y="-214.28571428571431"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="vx6-T8-bTl">
+            <objects>
+                <viewController id="hpY-Bk-D15" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="n74-uy-RBr">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BG" translatesAutoresizingMaskIntoConstraints="NO" id="sqN-qn-nC0">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="در حال دویدن" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jTB-aC-B4c">
+                                <rect key="frame" x="0.0" y="44" width="375" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="uYf-oL-xBR"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Shabnam-FD" family="Shabnam FD" pointSize="24"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view alpha="0.20000000000000001" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="omk-24-wY0">
+                                <rect key="frame" x="0.0" y="249" width="375" height="130"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="g8a-IN-hSW">
+                                        <rect key="frame" x="132" y="22.666666666666686" width="111.33333333333331" height="85"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="میانگین سرعت" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NZW-qW-WRS">
+                                                <rect key="frame" x="0.0" y="0.0" width="111.33333333333333" height="24.666666666666668"/>
+                                                <fontDescription key="fontDescription" name="Shabnam-FD" family="Shabnam FD" pointSize="18"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pry-SQ-p5f">
+                                                <rect key="frame" x="32.333333333333343" y="24.666666666666632" width="46.333333333333343" height="38.333333333333343"/>
+                                                <fontDescription key="fontDescription" name="Shabnam-Bold-FD" family="Shabnam FD" pointSize="28"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="/ مایل" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2sk-Fl-Pu5">
+                                                <rect key="frame" x="35.666666666666657" y="63" width="40" height="22"/>
+                                                <fontDescription key="fontDescription" name="Shabnam-FD" family="Shabnam FD" pointSize="16"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="g8a-IN-hSW" firstAttribute="centerY" secondItem="omk-24-wY0" secondAttribute="centerY" id="Smp-eH-d7C"/>
+                                    <constraint firstItem="g8a-IN-hSW" firstAttribute="centerX" secondItem="omk-24-wY0" secondAttribute="centerX" id="WLG-p0-fWi"/>
+                                    <constraint firstAttribute="height" constant="130" id="gsY-YT-Ofg"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="epv-gy-ooP">
+                                <rect key="frame" x="121.33333333333333" y="144" width="132.33333333333337" height="55"/>
+                                <fontDescription key="fontDescription" name="Shabnam-Bold-FD" family="Shabnam FD" pointSize="40"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="WuQ-Xk-92D">
+                                <rect key="frame" x="145" y="429" width="85" height="81.666666666666686"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="مسافت" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VAn-8W-EWy">
+                                        <rect key="frame" x="15.000000000000004" y="0.0" width="55.333333333333343" height="24.666666666666668"/>
+                                        <fontDescription key="fontDescription" name="Shabnam-FD" family="Shabnam FD" pointSize="18"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="VDy-c7-JeU">
+                                        <rect key="frame" x="0.0" y="26.666666666666686" width="85" height="55"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="مایل" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fsw-tX-9Mp">
+                                                <rect key="frame" x="0.0" y="16.666666666666629" width="29" height="22"/>
+                                                <fontDescription key="fontDescription" name="Shabnam-FD" family="Shabnam FD" pointSize="16"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RnJ-N5-yea">
+                                                <rect key="frame" x="37" y="0.0" width="48" height="55"/>
+                                                <fontDescription key="fontDescription" name="Shabnam-Bold-FD" family="Shabnam FD" pointSize="40"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="endRunOutline" translatesAutoresizingMaskIntoConstraints="NO" id="khu-iB-SIJ">
+                                <rect key="frame" x="94" y="714" width="187" height="64"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="EMM-NA-TcF"/>
+                                    <constraint firstAttribute="width" constant="187" id="OGq-gD-aVe"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="57Y-dQ-14r">
+                                <rect key="frame" x="265" y="714" width="64" height="64"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="HME-a6-Hxt"/>
+                                    <constraint firstAttribute="width" constant="64" id="JCV-he-ylQ"/>
+                                </constraints>
+                                <state key="normal" image="pauseButton"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IOH-E8-Lqf">
+                                <rect key="frame" x="101" y="720" width="52" height="52"/>
+                                <state key="normal" image="endRunButton"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="57Y-dQ-14r" firstAttribute="centerY" secondItem="khu-iB-SIJ" secondAttribute="centerY" id="03P-dT-glu"/>
+                            <constraint firstItem="khu-iB-SIJ" firstAttribute="leading" secondItem="IOH-E8-Lqf" secondAttribute="trailing" constant="-59" id="15n-Z0-hls"/>
+                            <constraint firstItem="khu-iB-SIJ" firstAttribute="centerX" secondItem="n74-uy-RBr" secondAttribute="centerX" id="1NY-Tx-pW9"/>
+                            <constraint firstItem="omk-24-wY0" firstAttribute="leading" secondItem="pxj-WU-BEb" secondAttribute="leading" id="9oY-n1-ZPe"/>
+                            <constraint firstItem="WuQ-Xk-92D" firstAttribute="top" secondItem="omk-24-wY0" secondAttribute="bottom" constant="50" id="AUB-1O-rl2"/>
+                            <constraint firstItem="sqN-qn-nC0" firstAttribute="leading" secondItem="pxj-WU-BEb" secondAttribute="leading" id="AtF-im-TCO"/>
+                            <constraint firstItem="epv-gy-ooP" firstAttribute="top" secondItem="jTB-aC-B4c" secondAttribute="bottom" constant="40" id="CJg-OA-AIE"/>
+                            <constraint firstItem="IOH-E8-Lqf" firstAttribute="centerY" secondItem="khu-iB-SIJ" secondAttribute="centerY" id="GZp-sC-d6i"/>
+                            <constraint firstItem="jTB-aC-B4c" firstAttribute="top" secondItem="pxj-WU-BEb" secondAttribute="top" id="Nln-Gi-URL"/>
+                            <constraint firstItem="jTB-aC-B4c" firstAttribute="leading" secondItem="pxj-WU-BEb" secondAttribute="leading" id="Q1e-6A-Rv1"/>
+                            <constraint firstItem="sqN-qn-nC0" firstAttribute="top" secondItem="n74-uy-RBr" secondAttribute="top" id="RfZ-0Q-rMX"/>
+                            <constraint firstItem="WuQ-Xk-92D" firstAttribute="centerX" secondItem="n74-uy-RBr" secondAttribute="centerX" id="UO6-gi-CgD"/>
+                            <constraint firstItem="57Y-dQ-14r" firstAttribute="leading" secondItem="khu-iB-SIJ" secondAttribute="trailing" constant="-16" id="Ue8-Oe-lt8"/>
+                            <constraint firstItem="epv-gy-ooP" firstAttribute="centerX" secondItem="n74-uy-RBr" secondAttribute="centerX" id="Vmn-Gm-aem"/>
+                            <constraint firstItem="omk-24-wY0" firstAttribute="top" secondItem="epv-gy-ooP" secondAttribute="bottom" constant="50" id="gz4-ZT-pAv"/>
+                            <constraint firstItem="sqN-qn-nC0" firstAttribute="trailing" secondItem="pxj-WU-BEb" secondAttribute="trailing" id="iDX-Bz-p8o"/>
+                            <constraint firstItem="omk-24-wY0" firstAttribute="trailing" secondItem="pxj-WU-BEb" secondAttribute="trailing" id="iSz-HG-dVg"/>
+                            <constraint firstAttribute="bottom" secondItem="sqN-qn-nC0" secondAttribute="bottom" id="kKZ-pv-6dw"/>
+                            <constraint firstItem="jTB-aC-B4c" firstAttribute="trailing" secondItem="pxj-WU-BEb" secondAttribute="trailing" id="sCj-z1-wT4"/>
+                            <constraint firstItem="khu-iB-SIJ" firstAttribute="bottom" secondItem="pxj-WU-BEb" secondAttribute="bottom" id="vI9-9O-ddl"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="pxj-WU-BEb"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LC2-2a-UWO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2540" y="-214.28571428571431"/>
+        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="68E-Da-WRV">
             <objects>
@@ -237,6 +375,9 @@
     <resources>
         <image name="BG" width="375" height="667"/>
         <image name="centerNavButton" width="58" height="58"/>
+        <image name="endRunButton" width="57" height="57"/>
+        <image name="endRunOutline" width="232" height="75"/>
+        <image name="pauseButton" width="75" height="75"/>
         <image name="startRunningButton" width="71" height="71"/>
         <image name="tabbar-myLogIconGray" width="25" height="25"/>
         <image name="tabbar-runIconGray" width="27" height="28"/>
