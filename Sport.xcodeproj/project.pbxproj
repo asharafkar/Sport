@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		298627332257425000A51764 /* RunLogVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 298627322257425000A51764 /* RunLogVC.swift */; };
 		2994CFA2225608880097840C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2994CFA1225608880097840C /* AppDelegate.swift */; };
-		2994CFA4225608880097840C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2994CFA3225608880097840C /* ViewController.swift */; };
+		2994CFA4225608880097840C /* BeginRunVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2994CFA3225608880097840C /* BeginRunVC.swift */; };
 		2994CFA7225608880097840C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2994CFA5225608880097840C /* Main.storyboard */; };
 		2994CFAA225608880097840C /* Sport.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2994CFA8225608880097840C /* Sport.xcdatamodeld */; };
 		2994CFAC225608890097840C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2994CFAB225608890097840C /* Assets.xcassets */; };
@@ -20,9 +21,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		298627322257425000A51764 /* RunLogVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunLogVC.swift; sourceTree = "<group>"; };
 		2994CF9E225608880097840C /* Sport.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sport.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2994CFA1225608880097840C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		2994CFA3225608880097840C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		2994CFA3225608880097840C /* BeginRunVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeginRunVC.swift; sourceTree = "<group>"; };
 		2994CFA6225608880097840C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2994CFA9225608880097840C /* Sport.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Sport.xcdatamodel; sourceTree = "<group>"; };
 		2994CFAB225608890097840C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -45,6 +47,36 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2986272E2257414E00A51764 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				2994CFA3225608880097840C /* BeginRunVC.swift */,
+				298627322257425000A51764 /* RunLogVC.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		2986272F2257415B00A51764 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		298627302257416900A51764 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		298627312257418300A51764 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		2994CF95225608880097840C = {
 			isa = PBXGroup;
 			children = (
@@ -64,12 +96,14 @@
 		2994CFA0225608880097840C /* Sport */ = {
 			isa = PBXGroup;
 			children = (
+				298627312257418300A51764 /* Model */,
+				298627302257416900A51764 /* Extensions */,
+				2986272F2257415B00A51764 /* Utilities */,
+				2986272E2257414E00A51764 /* Controller */,
 				2994CFBD22561D1C0097840C /* View */,
 				2994CFB622561B1F0097840C /* Resources */,
 				2994CFA1225608880097840C /* AppDelegate.swift */,
-				2994CFA3225608880097840C /* ViewController.swift */,
 				2994CFA5225608880097840C /* Main.storyboard */,
-				2994CFAB225608890097840C /* Assets.xcassets */,
 				2994CFAD225608890097840C /* LaunchScreen.storyboard */,
 				2994CFB0225608890097840C /* Info.plist */,
 				2994CFA8225608880097840C /* Sport.xcdatamodeld */,
@@ -80,6 +114,7 @@
 		2994CFB622561B1F0097840C /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				2994CFAB225608890097840C /* Assets.xcassets */,
 				2994CFB722561B3D0097840C /* Shabnam-Bold-FD.ttf */,
 				2994CFB822561B3D0097840C /* Shabnam-FD.ttf */,
 				2994CFB922561B3D0097840C /* Shabnam-Light-FD.ttf */,
@@ -169,7 +204,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2994CFA4225608880097840C /* ViewController.swift in Sources */,
+				298627332257425000A51764 /* RunLogVC.swift in Sources */,
+				2994CFA4225608880097840C /* BeginRunVC.swift in Sources */,
 				2994CFAA225608880097840C /* Sport.xcdatamodeld in Sources */,
 				2994CFBF22561D530097840C /* MyTabBarItem.swift in Sources */,
 				2994CFA2225608880097840C /* AppDelegate.swift in Sources */,

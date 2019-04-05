@@ -1,0 +1,20 @@
+//
+//  ViewController.swift
+//  Sport
+//
+//  Created by Amir on 4/4/19.
+//  Copyright © 2019 Amir Sharafkar. All rights reserved.
+//
+
+import UIKit
+
+class BeginRunVC: UIViewController {
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Do any additional setup after loading the view.
+    }
+
+
+}
+
