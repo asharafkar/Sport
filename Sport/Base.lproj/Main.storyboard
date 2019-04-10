@@ -21,7 +21,7 @@
         <!--تاریخچه-->
         <scene sceneID="Vs0-pd-z5U">
             <objects>
-                <viewController id="Ckl-Yz-xWs" sceneMemberID="viewController">
+                <viewController id="Ckl-Yz-xWs" customClass="RunLogVC" customModule="Sport" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Lo5-qq-tOi">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -136,7 +136,7 @@
         <!--دویدن-->
         <scene sceneID="efZ-Yb-xMv">
             <objects>
-                <viewController id="XDJ-Lt-pyR" sceneMemberID="viewController">
+                <viewController id="XDJ-Lt-pyR" customClass="BeginRunVC" customModule="Sport" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Vks-p3-cWe">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -212,15 +212,18 @@
                         <viewLayoutGuide key="safeArea" id="VLz-zk-2Bu"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="دویدن" image="tabbar-runIconGray" id="I9f-xe-qYN" customClass="MyTabBarItem" customModule="Sport" customModuleProvider="target"/>
+                    <connections>
+                        <outlet property="mapView" destination="xyC-BN-EnO" id="zSX-nC-dPC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="X0g-Hv-hHw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1762.4000000000001" y="-214.28571428571431"/>
         </scene>
-        <!--View Controller-->
+        <!--Current RunVC-->
         <scene sceneID="vx6-T8-bTl">
             <objects>
-                <viewController id="hpY-Bk-D15" sceneMemberID="viewController">
+                <viewController id="hpY-Bk-D15" customClass="CurrentRunVC" customModule="Sport" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="n74-uy-RBr">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -347,6 +350,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="pxj-WU-BEb"/>
                     </view>
+                    <connections>
+                        <outlet property="sliderButton" destination="IOH-E8-Lqf" id="Yu9-i3-sFX"/>
+                        <outlet property="swipeBGImageView" destination="khu-iB-SIJ" id="RaH-RG-OgK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LC2-2a-UWO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
