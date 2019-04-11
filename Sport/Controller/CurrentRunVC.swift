@@ -17,11 +17,13 @@ class CurrentRunVC: UIViewController, UIGestureRecognizerDelegate, CLLocationMan
     @IBOutlet weak var durationLabel: UILabel!
     @IBOutlet weak var paceLabel: UILabel!
     @IBOutlet weak var distanceLabel: UILabel!
+    @IBOutlet weak var pauseButton: UIButton!
     
     var startLocation: CLLocation!
     var lastLocation: CLLocation!
     var counter: Int = 0
     var timer = Timer()
+    var pace = 0
     var runDistance = 0.0
     
     
@@ -35,6 +37,7 @@ class CurrentRunVC: UIViewController, UIGestureRecognizerDelegate, CLLocationMan
     func startRun(){
         manager?.startUpdatingLocation()
         startTimer()
+        pauseButton.setImage(UIImage(named: "pauseButton"), for: .normal)
     }
     
     func startTimer(){
@@ -47,8 +50,21 @@ class CurrentRunVC: UIViewController, UIGestureRecognizerDelegate, CLLocationMan
         durationLabel.text = counter.formatTimeDurationToString()
     }
     
+    func calculatePace(time seconds: Int, miles: Double) -> String{
+        pace = Int(Double(seconds) / miles)
+        return pace.formatTimeDurationToString()
+    }
+    
     func stopRun(){
         manager?.stopUpdatingLocation()
+    }
+    
+    func pauseRun(){
+        startLocation = nil
+        lastLocation = nil
+        timer.invalidate()
+        manager?.stopUpdatingLocation()
+        pauseButton.setImage(UIImage(named: "resumeButton"), for: .normal)
     }
     
     override func viewDidLoad() {
@@ -63,7 +79,15 @@ class CurrentRunVC: UIViewController, UIGestureRecognizerDelegate, CLLocationMan
         sliderButton.isUserInteractionEnabled = true
         swipeGesture.delegate = self
     }
-
+    
+    @IBAction func pauseButtonPressed(_ sender: UIButton) {
+        if timer.isValid{
+            pauseRun()
+        }else{
+            startRun()
+        }
+    }
+    
     @objc func endRunSwiped(sender: UIPanGestureRecognizer){
         let minAdjust: CGFloat = 62
         let maxAdjust: CGFloat = 110
@@ -74,6 +98,7 @@ class CurrentRunVC: UIViewController, UIGestureRecognizerDelegate, CLLocationMan
                     sliderView.center.x = sliderView.center.x + translation.x
                 }else if sliderView.center.x >= (swipeBGImageView.center.x + maxAdjust){
                     sliderView.center.x = swipeBGImageView.center.x + maxAdjust
+                    stopRun()
                     dismiss(animated: true, completion: nil)
                 }else{
                     sliderView.center.x = swipeBGImageView.center.x - minAdjust
@@ -107,6 +132,9 @@ class CurrentRunVC: UIViewController, UIGestureRecognizerDelegate, CLLocationMan
         }else if let location = locations.last{
             runDistance += lastLocation.distance(from: location)
             distanceLabel.text = "\(runDistance.metersToMiles(places: 1))"
+            if counter > 0 && runDistance > 0{
+                paceLabel.text = calculatePace(time: counter, miles: runDistance.metersToMiles(places: 2))
+            }
         }
         lastLocation = locations.last
     }

@@ -319,6 +319,9 @@
                                     <constraint firstAttribute="width" constant="64" id="JCV-he-ylQ"/>
                                 </constraints>
                                 <state key="normal" image="pauseButton"/>
+                                <connections>
+                                    <action selector="pauseButtonPressed:" destination="hpY-Bk-D15" eventType="touchUpInside" id="VV1-5T-9ZZ"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IOH-E8-Lqf">
                                 <rect key="frame" x="101" y="720" width="52" height="52"/>
@@ -354,6 +357,7 @@
                         <outlet property="distanceLabel" destination="RnJ-N5-yea" id="Zmv-1i-ahE"/>
                         <outlet property="durationLabel" destination="epv-gy-ooP" id="b5n-94-avC"/>
                         <outlet property="paceLabel" destination="Pry-SQ-p5f" id="mkH-Xc-u3Y"/>
+                        <outlet property="pauseButton" destination="57Y-dQ-14r" id="gBK-o1-T3b"/>
                         <outlet property="sliderButton" destination="IOH-E8-Lqf" id="Yu9-i3-sFX"/>
                         <outlet property="swipeBGImageView" destination="khu-iB-SIJ" id="RaH-RG-OgK"/>
                     </connections>
