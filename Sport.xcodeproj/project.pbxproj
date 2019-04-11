@@ -19,6 +19,7 @@
 		2994CFBB22561B3D0097840C /* Shabnam-FD.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2994CFB822561B3D0097840C /* Shabnam-FD.ttf */; };
 		2994CFBC22561B3D0097840C /* Shabnam-Light-FD.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2994CFB922561B3D0097840C /* Shabnam-Light-FD.ttf */; };
 		2994CFBF22561D530097840C /* MyTabBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2994CFBE22561D530097840C /* MyTabBarItem.swift */; };
+		29C57F9F225F566100C34E05 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29C57F9E225F566100C34E05 /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		2994CFB822561B3D0097840C /* Shabnam-FD.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Shabnam-FD.ttf"; sourceTree = "<group>"; };
 		2994CFB922561B3D0097840C /* Shabnam-Light-FD.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Shabnam-Light-FD.ttf"; sourceTree = "<group>"; };
 		2994CFBE22561D530097840C /* MyTabBarItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTabBarItem.swift; sourceTree = "<group>"; };
+		29C57F9E225F566100C34E05 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 		298627302257416900A51764 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				29C57F9E225F566100C34E05 /* Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -213,6 +216,7 @@
 				2994CFBF22561D530097840C /* MyTabBarItem.swift in Sources */,
 				2912203F2257880D0080D1F3 /* CurrentRunVC.swift in Sources */,
 				2994CFA2225608880097840C /* AppDelegate.swift in Sources */,
+				29C57F9F225F566100C34E05 /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

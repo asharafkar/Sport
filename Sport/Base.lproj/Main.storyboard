@@ -351,6 +351,9 @@
                         <viewLayoutGuide key="safeArea" id="pxj-WU-BEb"/>
                     </view>
                     <connections>
+                        <outlet property="distanceLabel" destination="RnJ-N5-yea" id="Zmv-1i-ahE"/>
+                        <outlet property="durationLabel" destination="epv-gy-ooP" id="b5n-94-avC"/>
+                        <outlet property="paceLabel" destination="Pry-SQ-p5f" id="mkH-Xc-u3Y"/>
                         <outlet property="sliderButton" destination="IOH-E8-Lqf" id="Yu9-i3-sFX"/>
                         <outlet property="swipeBGImageView" destination="khu-iB-SIJ" id="RaH-RG-OgK"/>
                     </connections>
