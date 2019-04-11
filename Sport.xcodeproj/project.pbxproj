@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2912203F2257880D0080D1F3 /* CurrentRunVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2912203E2257880D0080D1F3 /* CurrentRunVC.swift */; };
+		291294B1225FF35000574A23 /* Run.swift in Sources */ = {isa = PBXBuildFile; fileRef = 291294B0225FF35000574A23 /* Run.swift */; };
 		298627332257425000A51764 /* RunLogVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 298627322257425000A51764 /* RunLogVC.swift */; };
 		2994CFA2225608880097840C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2994CFA1225608880097840C /* AppDelegate.swift */; };
 		2994CFA4225608880097840C /* BeginRunVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2994CFA3225608880097840C /* BeginRunVC.swift */; };
@@ -20,10 +21,12 @@
 		2994CFBC22561B3D0097840C /* Shabnam-Light-FD.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2994CFB922561B3D0097840C /* Shabnam-Light-FD.ttf */; };
 		2994CFBF22561D530097840C /* MyTabBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2994CFBE22561D530097840C /* MyTabBarItem.swift */; };
 		29C57F9F225F566100C34E05 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29C57F9E225F566100C34E05 /* Extensions.swift */; };
+		B11E1CE5FA07F20B67122FC4 /* Pods_Sport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBE57B056292E8283469A4F2 /* Pods_Sport.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		2912203E2257880D0080D1F3 /* CurrentRunVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentRunVC.swift; sourceTree = "<group>"; };
+		291294B0225FF35000574A23 /* Run.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Run.swift; sourceTree = "<group>"; };
 		298627322257425000A51764 /* RunLogVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunLogVC.swift; sourceTree = "<group>"; };
 		2994CF9E225608880097840C /* Sport.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sport.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2994CFA1225608880097840C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -38,6 +41,9 @@
 		2994CFB922561B3D0097840C /* Shabnam-Light-FD.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Shabnam-Light-FD.ttf"; sourceTree = "<group>"; };
 		2994CFBE22561D530097840C /* MyTabBarItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTabBarItem.swift; sourceTree = "<group>"; };
 		29C57F9E225F566100C34E05 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		60688DAE5B747BF5B17143E6 /* Pods-Sport.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sport.release.xcconfig"; path = "Pods/Target Support Files/Pods-Sport/Pods-Sport.release.xcconfig"; sourceTree = "<group>"; };
+		EBE57B056292E8283469A4F2 /* Pods_Sport.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Sport.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA47F38F4F121CCCAD20D101 /* Pods-Sport.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sport.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Sport/Pods-Sport.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B11E1CE5FA07F20B67122FC4 /* Pods_Sport.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,6 +86,7 @@
 		298627312257418300A51764 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				291294B0225FF35000574A23 /* Run.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -88,6 +96,8 @@
 			children = (
 				2994CFA0225608880097840C /* Sport */,
 				2994CF9F225608880097840C /* Products */,
+				5663A970A0DF0F2E45E4E435 /* Pods */,
+				9D0F6A9C3428B9E43DE3E1F2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -136,6 +146,23 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		5663A970A0DF0F2E45E4E435 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FA47F38F4F121CCCAD20D101 /* Pods-Sport.debug.xcconfig */,
+				60688DAE5B747BF5B17143E6 /* Pods-Sport.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		9D0F6A9C3428B9E43DE3E1F2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EBE57B056292E8283469A4F2 /* Pods_Sport.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -143,9 +170,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2994CFB3225608890097840C /* Build configuration list for PBXNativeTarget "Sport" */;
 			buildPhases = (
+				66EA690C5DB549B16465F228 /* [CP] Check Pods Manifest.lock */,
 				2994CF9A225608880097840C /* Sources */,
 				2994CF9B225608880097840C /* Frameworks */,
 				2994CF9C225608880097840C /* Resources */,
+				1C668098C26CB657F950A8F1 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -205,12 +234,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1C668098C26CB657F950A8F1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Sport/Pods-Sport-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Sport/Pods-Sport-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		66EA690C5DB549B16465F228 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Sport-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		2994CF9A225608880097840C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				298627332257425000A51764 /* RunLogVC.swift in Sources */,
+				291294B1225FF35000574A23 /* Run.swift in Sources */,
 				2994CFA4225608880097840C /* BeginRunVC.swift in Sources */,
 				2994CFAA225608880097840C /* Sport.xcdatamodeld in Sources */,
 				2994CFBF22561D530097840C /* MyTabBarItem.swift in Sources */,
@@ -360,6 +431,7 @@
 		};
 		2994CFB4225608890097840C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FA47F38F4F121CCCAD20D101 /* Pods-Sport.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -378,6 +450,7 @@
 		};
 		2994CFB5225608890097840C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 60688DAE5B747BF5B17143E6 /* Pods-Sport.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
