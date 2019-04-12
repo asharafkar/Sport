@@ -13,6 +13,11 @@ class BeginRunVC: UIViewController {
     
     var manager: CLLocationManager?
     @IBOutlet weak var mapView: MKMapView!
+    @IBOutlet weak var lastRunView: UIView!
+    @IBOutlet weak var paceLabel: UILabel!
+    @IBOutlet weak var distanceLabel: UILabel!
+    @IBOutlet weak var durationLabel: UILabel!
+    
     
 
     override func viewDidLoad() {
@@ -28,12 +33,27 @@ class BeginRunVC: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         manager?.delegate = self
         manager?.startUpdatingLocation()
+        getLastRun()
     }
     
     override func viewDidDisappear(_ animated: Bool) {
         manager?.stopUpdatingLocation()
     }
-
+    
+    @IBAction func lastRunClosePressed(_ sender: UIButton) {
+        lastRunView.isHidden = true
+    }
+    
+    func getLastRun(){
+        guard let run = Run.getAllRuns()?.first else {
+            lastRunView.isHidden = true
+            return
+        }
+        paceLabel.text = "میانگین سرعت: " + run.pace.formatTimeDurationToString()
+        distanceLabel.text = "مسافت: " + "\(run.distance.metersToMiles()) mi"
+        durationLabel.text = "مدت زمان: " + run.duration.formatTimeDurationToString()
+    }
+    
 }
 
 extension BeginRunVC: MKMapViewDelegate{

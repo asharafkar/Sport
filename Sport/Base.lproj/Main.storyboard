@@ -42,7 +42,7 @@
                                 <rect key="frame" x="0.0" y="104" width="375" height="625"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="LogCell" rowHeight="70" id="f7x-iJ-ZgF">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="LogCell" rowHeight="70" id="f7x-iJ-ZgF" customClass="RunLogCell" customModule="Sport" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="70"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="f7x-iJ-ZgF" id="2RM-1W-feO">
@@ -87,13 +87,24 @@
                                                             <fontDescription key="fontDescription" name="Shabnam-FD" family="Shabnam FD" pointSize="13"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Sg-AS-wfw">
+                                                            <rect key="frame" x="0.0" y="68" width="375" height="2"/>
+                                                            <color key="backgroundColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="2" id="uOT-8c-q13"/>
+                                                            </constraints>
+                                                        </view>
                                                     </subviews>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
+                                                        <constraint firstItem="0Sg-AS-wfw" firstAttribute="leading" secondItem="rdE-wk-3GX" secondAttribute="leading" id="BQK-t0-91J"/>
                                                         <constraint firstItem="YgI-RE-nHD" firstAttribute="centerY" secondItem="rdE-wk-3GX" secondAttribute="centerY" id="P3D-zV-QPW"/>
+                                                        <constraint firstAttribute="trailing" secondItem="0Sg-AS-wfw" secondAttribute="trailing" id="ZRs-WD-FQa"/>
                                                         <constraint firstItem="EAU-zN-w2O" firstAttribute="centerY" secondItem="rdE-wk-3GX" secondAttribute="centerY" id="bAN-Pv-cgd"/>
                                                         <constraint firstAttribute="trailing" secondItem="EAU-zN-w2O" secondAttribute="trailing" constant="8" id="izH-TA-swt"/>
                                                         <constraint firstItem="YgI-RE-nHD" firstAttribute="centerX" secondItem="rdE-wk-3GX" secondAttribute="centerX" id="l44-aF-dss"/>
+                                                        <constraint firstAttribute="bottom" secondItem="0Sg-AS-wfw" secondAttribute="bottom" id="le6-iS-fma"/>
                                                         <constraint firstItem="K2f-Hj-ixg" firstAttribute="leading" secondItem="rdE-wk-3GX" secondAttribute="leading" constant="8" id="nNg-OT-a9K"/>
                                                         <constraint firstItem="K2f-Hj-ixg" firstAttribute="centerY" secondItem="rdE-wk-3GX" secondAttribute="centerY" id="pxM-wV-BzN"/>
                                                     </constraints>
@@ -107,6 +118,12 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <outlet property="averagePaceLabel" destination="67H-6W-6yD" id="Jjq-NB-7vN"/>
+                                            <outlet property="dateLabel" destination="EAU-zN-w2O" id="Ta7-N8-eti"/>
+                                            <outlet property="distanceLabel" destination="kR2-0v-Cjl" id="hfp-jK-eIw"/>
+                                            <outlet property="durationLabel" destination="tEV-O9-pZK" id="o73-ps-p60"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -128,6 +145,9 @@
                         <viewLayoutGuide key="safeArea" id="W2Y-A4-jfW"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="تاریخچه" image="tabbar-myLogIconGray" id="6aM-Nu-i5Y" customClass="MyTabBarItem" customModule="Sport" customModuleProvider="target"/>
+                    <connections>
+                        <outlet property="tableView" destination="oor-Nf-JWA" id="k32-MX-MEQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vjk-fQ-IYg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -189,6 +209,61 @@
                                 <rect key="frame" x="309" y="531" width="58" height="58"/>
                                 <state key="normal" image="centerNavButton"/>
                             </button>
+                            <view alpha="0.59999999999999998" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lZX-AM-FzR">
+                                <rect key="frame" x="0.0" y="104" width="375" height="98"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="آخرین فعالیت" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f2V-vB-WV2">
+                                        <rect key="frame" x="286.66666666666669" y="7.9999999999999982" width="80.333333333333314" height="19.333333333333329"/>
+                                        <fontDescription key="fontDescription" name="Shabnam-Bold-FD" family="Shabnam FD" pointSize="14"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="bottom" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="0R1-64-KZz">
+                                        <rect key="frame" x="286" y="35.333333333333343" width="81" height="56"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="میانگین سرعت: " textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X9x-qf-Bbq">
+                                                <rect key="frame" x="0.0" y="0.0" width="81" height="16.666666666666668"/>
+                                                <fontDescription key="fontDescription" name="Shabnam-FD" family="Shabnam FD" pointSize="12"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="مسافت:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zJT-f9-yfY">
+                                                <rect key="frame" x="40.666666666666686" y="19.666666666666657" width="40.333333333333343" height="16.666666666666671"/>
+                                                <fontDescription key="fontDescription" name="Shabnam-FD" family="Shabnam FD" pointSize="12"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="مدت زمان:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lDo-uI-Q2u">
+                                                <rect key="frame" x="28.666666666666689" y="39.333333333333314" width="52.333333333333343" height="16.666666666666671"/>
+                                                <fontDescription key="fontDescription" name="Shabnam-FD" family="Shabnam FD" pointSize="12"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FQM-pX-cJw">
+                                        <rect key="frame" x="8" y="35" width="28" height="28"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="28" id="RnW-bT-eJe"/>
+                                            <constraint firstAttribute="height" constant="28" id="bbs-tr-vN8"/>
+                                        </constraints>
+                                        <state key="normal" image="closeButton"/>
+                                        <connections>
+                                            <action selector="lastRunClosePressed:" destination="XDJ-Lt-pyR" eventType="touchUpInside" id="xhH-iY-jsL"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="98" id="4Mt-mB-irI"/>
+                                    <constraint firstItem="FQM-pX-cJw" firstAttribute="leading" secondItem="lZX-AM-FzR" secondAttribute="leading" constant="8" id="SMl-R5-Tab"/>
+                                    <constraint firstItem="0R1-64-KZz" firstAttribute="top" secondItem="f2V-vB-WV2" secondAttribute="bottom" constant="8" id="TGX-wy-dhA"/>
+                                    <constraint firstAttribute="trailing" secondItem="f2V-vB-WV2" secondAttribute="trailing" constant="8" id="X7i-LH-4PF"/>
+                                    <constraint firstAttribute="trailing" secondItem="0R1-64-KZz" secondAttribute="trailing" constant="8" id="cLZ-Kl-Bxu"/>
+                                    <constraint firstItem="f2V-vB-WV2" firstAttribute="top" secondItem="lZX-AM-FzR" secondAttribute="top" constant="8" id="e7Q-ZU-MzV"/>
+                                    <constraint firstItem="FQM-pX-cJw" firstAttribute="centerY" secondItem="lZX-AM-FzR" secondAttribute="centerY" id="wnc-m7-ref"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -203,9 +278,12 @@
                             <constraint firstItem="8ER-VR-vtN" firstAttribute="bottom" secondItem="VLz-zk-2Bu" secondAttribute="bottom" id="Oha-WY-6mh"/>
                             <constraint firstItem="xyC-BN-EnO" firstAttribute="top" secondItem="8E4-Dx-3j7" secondAttribute="bottom" id="UC9-Rq-u5A"/>
                             <constraint firstItem="8E4-Dx-3j7" firstAttribute="trailing" secondItem="VLz-zk-2Bu" secondAttribute="trailing" id="coy-Uf-QbI"/>
+                            <constraint firstItem="lZX-AM-FzR" firstAttribute="trailing" secondItem="VLz-zk-2Bu" secondAttribute="trailing" id="dOY-kc-2fb"/>
                             <constraint firstItem="8E4-Dx-3j7" firstAttribute="top" secondItem="VLz-zk-2Bu" secondAttribute="top" id="hNC-ln-RsV"/>
                             <constraint firstItem="8E4-Dx-3j7" firstAttribute="leading" secondItem="VLz-zk-2Bu" secondAttribute="leading" id="laY-aK-Dad"/>
                             <constraint firstItem="xyC-BN-EnO" firstAttribute="leading" secondItem="VLz-zk-2Bu" secondAttribute="leading" id="n0t-Rj-AgZ"/>
+                            <constraint firstItem="lZX-AM-FzR" firstAttribute="leading" secondItem="VLz-zk-2Bu" secondAttribute="leading" id="ncC-N1-glA"/>
+                            <constraint firstItem="lZX-AM-FzR" firstAttribute="top" secondItem="8E4-Dx-3j7" secondAttribute="bottom" id="q7a-Fw-01u"/>
                             <constraint firstAttribute="bottom" secondItem="pUb-q6-84Y" secondAttribute="bottom" id="s85-5p-d2O"/>
                             <constraint firstItem="8ER-VR-vtN" firstAttribute="trailing" secondItem="VLz-zk-2Bu" secondAttribute="trailing" id="z6m-iz-Gnj"/>
                         </constraints>
@@ -213,7 +291,11 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="دویدن" image="tabbar-runIconGray" id="I9f-xe-qYN" customClass="MyTabBarItem" customModule="Sport" customModuleProvider="target"/>
                     <connections>
+                        <outlet property="distanceLabel" destination="zJT-f9-yfY" id="J2h-sK-9lS"/>
+                        <outlet property="durationLabel" destination="lDo-uI-Q2u" id="brA-rK-bn7"/>
+                        <outlet property="lastRunView" destination="lZX-AM-FzR" id="CgT-Ox-tCZ"/>
                         <outlet property="mapView" destination="xyC-BN-EnO" id="zSX-nC-dPC"/>
+                        <outlet property="paceLabel" destination="X9x-qf-Bbq" id="wLB-jq-e9u"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="X0g-Hv-hHw" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -389,6 +471,7 @@
     <resources>
         <image name="BG" width="375" height="667"/>
         <image name="centerNavButton" width="58" height="58"/>
+        <image name="closeButton" width="28" height="28"/>
         <image name="endRunButton" width="57" height="57"/>
         <image name="endRunOutline" width="232" height="75"/>
         <image name="pauseButton" width="75" height="75"/>
