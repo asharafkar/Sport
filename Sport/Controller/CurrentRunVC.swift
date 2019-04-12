@@ -57,6 +57,7 @@ class CurrentRunVC: UIViewController, UIGestureRecognizerDelegate, CLLocationMan
     
     func stopRun(){
         manager?.stopUpdatingLocation()
+        Run.addRunToRealm(pace: pace, distance: runDistance, duration: counter)
     }
     
     func pauseRun(){
@@ -78,6 +79,9 @@ class CurrentRunVC: UIViewController, UIGestureRecognizerDelegate, CLLocationMan
         sliderButton.addGestureRecognizer(swipeGesture)
         sliderButton.isUserInteractionEnabled = true
         swipeGesture.delegate = self
+        
+        print(Run.getAllRuns())
+        print("")
     }
     
     @IBAction func pauseButtonPressed(_ sender: UIButton) {
