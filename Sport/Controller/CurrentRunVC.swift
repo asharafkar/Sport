@@ -8,6 +8,7 @@
 
 import UIKit
 import MapKit
+import RealmSwift
 
 class CurrentRunVC: UIViewController, UIGestureRecognizerDelegate, CLLocationManagerDelegate{
 
@@ -25,6 +26,7 @@ class CurrentRunVC: UIViewController, UIGestureRecognizerDelegate, CLLocationMan
     var timer = Timer()
     var pace = 0
     var runDistance = 0.0
+    fileprivate var locations = List<Location>()
     
     
     
@@ -57,7 +59,7 @@ class CurrentRunVC: UIViewController, UIGestureRecognizerDelegate, CLLocationMan
     
     func stopRun(){
         manager?.stopUpdatingLocation()
-        Run.addRunToRealm(pace: pace, distance: runDistance, duration: counter)
+        Run.addRunToRealm(pace: pace, distance: runDistance, duration: counter, locations: locations)
     }
     
     func pauseRun(){
@@ -134,6 +136,9 @@ class CurrentRunVC: UIViewController, UIGestureRecognizerDelegate, CLLocationMan
         if startLocation == nil{
             startLocation = locations.first
         }else if let location = locations.last{
+            let newLocation = Location(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)
+            self.locations.insert(newLocation, at: 0)
+            print(self.locations.count)
             runDistance += lastLocation.distance(from: location)
             distanceLabel.text = "\(runDistance.metersToMiles(places: 1))"
             if counter > 0 && runDistance > 0{

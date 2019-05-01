@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		2912203F2257880D0080D1F3 /* CurrentRunVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2912203E2257880D0080D1F3 /* CurrentRunVC.swift */; };
 		291294B1225FF35000574A23 /* Run.swift in Sources */ = {isa = PBXBuildFile; fileRef = 291294B0225FF35000574A23 /* Run.swift */; };
+		2912B2B92279793B005F1A0D /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2912B2B82279793B005F1A0D /* Location.swift */; };
 		298627332257425000A51764 /* RunLogVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 298627322257425000A51764 /* RunLogVC.swift */; };
 		2994CFA2225608880097840C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2994CFA1225608880097840C /* AppDelegate.swift */; };
 		2994CFA4225608880097840C /* BeginRunVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2994CFA3225608880097840C /* BeginRunVC.swift */; };
@@ -29,6 +30,7 @@
 /* Begin PBXFileReference section */
 		2912203E2257880D0080D1F3 /* CurrentRunVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentRunVC.swift; sourceTree = "<group>"; };
 		291294B0225FF35000574A23 /* Run.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Run.swift; sourceTree = "<group>"; };
+		2912B2B82279793B005F1A0D /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		298627322257425000A51764 /* RunLogVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunLogVC.swift; sourceTree = "<group>"; };
 		2994CF9E225608880097840C /* Sport.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sport.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2994CFA1225608880097840C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -92,6 +94,7 @@
 			isa = PBXGroup;
 			children = (
 				291294B0225FF35000574A23 /* Run.swift */,
+				2912B2B82279793B005F1A0D /* Location.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -287,6 +290,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				298627332257425000A51764 /* RunLogVC.swift in Sources */,
+				2912B2B92279793B005F1A0D /* Location.swift in Sources */,
 				291294B1225FF35000574A23 /* Run.swift in Sources */,
 				2994CFA4225608880097840C /* BeginRunVC.swift in Sources */,
 				2994CFAA225608880097840C /* Sport.xcdatamodeld in Sources */,
